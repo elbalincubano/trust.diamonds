@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">	
+<link rel="stylesheet" href="../files/css/style.css" type="text/css">
+<script>
+window.onerror=new Function("return true");
+ 
+function sendMail() {
+var men1 ="Pedido a través de Trust Diamonds";
+var men2 ="Cantidad de diamantes: 1000";
+var men3 ="Precio: 4950 cup";
+var men4 ="ID de Cliente: ";
+var men5 ="ID de Referido: ";
+var men6 ="Contactar al: +53 ";
+var enter ="%0A";
+var link = "trust.diamonds.free.fire@gmail.com"
++ "?cc=trust.diamonds.free.fire@gmail.com"
++ "&subject=" + escape(document.getElementById('subject').value)
++ "&body=" + men1 + enter + enter + men2 + enter + men3 + enter + men4 + escape(document.getElementById('idus').value) + enter + men5 + escape(document.getElementById('idrf').value) + enter + men6 + escape(document.getElementById('cell').value);
+ 
+window.location.href = "mailto:" +link;
+}
+//]]>
+</script>
+</head>
+<body style="background:rgba(0,0,0,0.05)">
+<header id="menu">
+<input type="checkbox" id="btn-menu">
+<label for="btn-menu"><img src="../files/img/ic_menu.png" alt=""></label>
+    <nav class="menu">
+	 <ul>
+	   <li><a class="font1" href="../index.html">Inicio</a></li>
+	   <li><a class="font1" href="../index.html#ofer">Ofertas</a></li>
+	   <li><a class="font1" href="../index.html#promo">Promociones</a></li>
+	   <li><a class="font1" href="../open_telegram.html">Actualizaciones</a></li>
+	   <li><a class="font1" href="">Soporte</a></li>
+	   <li><a style="border-bottom:1px solid rgba(0,0,0,0.3)" class="font1" class="font11" href="index.html">Ayuda</a></li>
+	 </ul>  
+	</nav>
+</header>
+<br><br><br><br>
+<img style="margin-left:20%; background:white; width:60%; box-shadow:0px 0px 2px 0.5px rgba(0,0,0,0.2); border:1px solid white; border-radius:5%;" src="../files/img/freefire_cupons.png">
+<br><br>
+
+<div class="factura">
+<center><h1 class="font1" style="font-size:24px; color:rgba(0,0,0,0.7)"><b>Factura de Compra</b></h1><br>
+	                <p style="margin:0; color:rgba(0,0,0,0.7);">Cantidad: 1000 💎</p>
+	                <p style="margin:0; color:rgba(0,0,0,0.7);">Total a pagar: <c style="color:red;">4450 CUP</c></p></center>
+	                <br>
+
+<input class="font1" readonly="readonly" id="subject" type="text" value=" Pedido de 1000 Diamantes"><br><br>
+<label class="font3" id="desc1">Mi ID de FreeFire</label><br>
+<input class="font1" placeholder=" 0000000000" type="number" id="idus" maxlength="10" required></input><br><br>
+<label class="font3" id="desc1">ID de mi referido</label><br>
+<input class="font1" placeholder=" 0000000000" type="number" id="idrf" maxlength="10" required></input><br><br>
+<label class="font3" id="desc1">Coloque aquí su número de teléfono</label><br>
+<input class="font1" placeholder=" +53 " type="number" id="cell" required></input><br><br>
+<input type="button" class="btn" value="Realizar Pedido" onclick="sendMail(); return false">
+<p>
+</div>
+<br><br>
+<hr style="width:90%; margin-left:5%;"></hr>
+<p class="font2" style="text-align:center; font-size:20px;">Trust Diamonds</p>
+<p class="font2" style="text-align:center; font-size 20px;">Desarrollado por: Company Gear</p>
+</div><br>
+</body>
+</html>
